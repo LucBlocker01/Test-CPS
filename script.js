@@ -1,5 +1,6 @@
 let timer = 0;
-let clics = 0
+let clics = 0;
+let cps = 0;
 
 const button = document.querySelector("button")
 
@@ -9,14 +10,22 @@ document.querySelector("button").addEventListener("click", () => {
     document.getElementById("message").innerHTML = timer;
     startTimer();
   }
-  clics += 1;
-  button.innerHTML = clics;
+  if (timer >= 0) {
+    clics += 1;
+    button.innerHTML = clics;
+  }
 })
 
 function startTimer() {
   setTimeout(() => {
-    timer -= 1;
-    startTimer();
-    document.getElementById("message").innerHTML = timer;
+    if (timer === 0) {
+      timer = -1;
+      cps = clics/10;
+      document.getElementById("message").innerHTML = "Temps écoulé! Score : "+cps.toFixed(1)+" clics par seconde";
+    } else {
+      timer -= 1;
+      startTimer();
+      document.getElementById("message").innerHTML = timer;
+    }
   }, 1000)
 }
