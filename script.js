@@ -7,6 +7,7 @@ const button = document.querySelector("button")
 document.querySelector("button").addEventListener("click", () => {
   if (button.innerHTML === "Cliquez sur moi!") {
     timer = 10;
+    document.getElementById("message").classList.remove("hide")
     document.getElementById("message").innerHTML = timer;
     startTimer();
   }

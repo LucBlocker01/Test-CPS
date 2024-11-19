@@ -1,0 +1,48 @@
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    background-color: lightcoral
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    background-color : red;
+    width: 100%;
+    border : solid rgb(122, 0, 0) 4px;
+    text-align: center;
+    font-size: 250%;
+    color: white;
+    font-weight: bolder;
+}
+
+.instructions, #message {
+    background-color : red;
+    border : solid rgb(122, 0, 0) 4px;
+    text-align: center;
+    margin-top: 1%;
+    font-size: 150%;
+    width: 50%;
+    color: white;
+    font-weight: bolder;
+}
+
+.cps {
+    margin-top: 1%;
+    width: 50%;
+    height: 50%;
+    font-size: 500%;
+}
+
+.hide {
+    display: none;
+}
