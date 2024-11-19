@@ -2,9 +2,9 @@ let timer = 0;
 let clics = 0;
 let cps = 0;
 
-const button = document.querySelector("button")
+const button = document.querySelector(".cps")
 
-document.querySelector("button").addEventListener("click", () => {
+button.addEventListener("click", () => {
   if (button.innerHTML === "Cliquez sur moi!") {
     timer = 10;
     document.getElementById("message").classList.remove("hide")

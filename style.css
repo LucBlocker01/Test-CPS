@@ -25,7 +25,12 @@ body {
     font-weight: bolder;
 }
 
-.instructions, #message {
+.buttonsList {
+    display: flex;
+    justify-content: center;
+}
+
+.instructions, #message, .buttonsList>button {
     background-color : red;
     border : solid rgb(122, 0, 0) 4px;
     text-align: center;
@@ -41,6 +46,10 @@ body {
     width: 50%;
     height: 50%;
     font-size: 500%;
+}
+
+button:not(.noleft):not(.cps) {
+    margin-left: 1px;
 }
 
 .hide {
