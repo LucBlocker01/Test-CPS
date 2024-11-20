@@ -10,3 +10,5 @@ Ce projet consiste à tester vos clics par seconde, qui est un terme utile que l
 PHP soit être installé sur votre système. Il existe de nombreux tutos sur Internet pour le faire. Il faut ensuite ouvrir en faisant clic droit + Maj sur le dossier principal du projet la fenêtre Powershell et écrire la commande ci-dessous.
 
 ```php -S localhost:8000```
+
+Finalement, ouvrez votre navigateur web (Chrome, Firefox, Brave...) et écrivez (localhost:8000) pour charger le projet.
