@@ -47,7 +47,7 @@ function startTimer(timerStorage) {
       console.log(timerStorage)
       timer = -1;
       cps = clics/timerStorage;
-      document.getElementById("message").innerHTML = "Temps écoulé! Score : "+cps.toFixed(1)+" clics par seconde";
+      document.getElementById("message").innerHTML = "Temps écoulé! Score : "+cps.toFixed(2)+" clics par seconde";
       document.getElementById("restart").classList.remove("hide")
       document.getElementById("restart").addEventListener("click", () => {
         button.innerHTML = "Cliquez sur moi!";
