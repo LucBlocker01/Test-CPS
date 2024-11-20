@@ -41,6 +41,10 @@ body {
     font-weight: bolder;
 }
 
+.buttonsList>.selected {
+    background-color : rgb(150, 0, 0);
+}
+
 .cps {
     margin-top: 1%;
     width: 50%;
@@ -54,4 +58,8 @@ button:not(.noleft):not(.cps) {
 
 .hide {
     display: none;
+}
+
+#restart {
+    margin-top: 5px;
 }

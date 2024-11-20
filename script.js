@@ -9,17 +9,19 @@ localStorage.setItem("timer", 5)
 timers.forEach((timer) => {
   timer.addEventListener("click", () => {
     console.log(timer.classList.value)
+    document.querySelector(".selected").classList.remove("selected")
+    timer.classList.add("selected")
     switch(timer.classList.value) {
-      case "5s noleft" :
+      case "5s noleft selected" :
         localStorage.setItem("timer", 5)
         break;
-      case "10s" :
+      case "10s selected" :
         localStorage.setItem("timer", 10)
         break;
-      case "30s" :
+      case "30s selected" :
         localStorage.setItem("timer", 30)
         break;
-      case "1m" :
+      case "1m selected" :
         localStorage.setItem("timer", 60)
         break;
     }
@@ -46,6 +48,11 @@ function startTimer(timerStorage) {
       timer = -1;
       cps = clics/timerStorage;
       document.getElementById("message").innerHTML = "Temps écoulé! Score : "+cps.toFixed(1)+" clics par seconde";
+      document.getElementById("restart").classList.remove("hide")
+      document.getElementById("restart").addEventListener("click", () => {
+        button.innerHTML = "Cliquez sur moi!";
+        clics = 0;
+      })
     } else {
       timer -= 1;
       startTimer(timerStorage);
